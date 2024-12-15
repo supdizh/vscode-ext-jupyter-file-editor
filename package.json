@@ -27,10 +27,23 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.sendToJupyter",
+          "group": "primary",
+          "label": "Send to Jupyter"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "extension.connectJupyter",
-        "title": "Connect to Jupyter Server"
+        "title": "Jupyter Remote: Connect to Jupyter Server"
+      },
+      {
+        "command": "extension.sendToJupyter",
+        "title": "Send to Jupyter"
       }
     ],
     "views": {
